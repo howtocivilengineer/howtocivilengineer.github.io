@@ -25,48 +25,44 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f5f7;
+      background: #f3f4f6;
       color: #1d2025;
       line-height: 1.6;
     }
 
-    /* HEADER */
-
     header {
       background: #1d2025;
       color: white;
-      padding: 55px 20px 50px;
       text-align: center;
+      padding: 70px 20px 65px;
     }
 
     header h1 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      margin-bottom: 12px;
-      letter-spacing: -1px;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      letter-spacing: -1.5px;
+      margin-bottom: 14px;
     }
 
     header p {
-      max-width: 700px;
-      margin: auto;
-      color: #d5d8dc;
+      max-width: 720px;
+      margin: 0 auto;
+      color: #d4d7db;
       font-size: 1.15rem;
     }
 
-    /* MAIN */
-
     main {
       max-width: 1200px;
-      margin: auto;
-      padding: 55px 20px 80px;
+      margin: 0 auto;
+      padding: 60px 20px 80px;
     }
 
     section {
-      margin-bottom: 65px;
+      margin-bottom: 70px;
     }
 
     section h2 {
       font-size: 2rem;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .section-intro {
@@ -74,48 +70,45 @@
       margin-bottom: 30px;
     }
 
-    /* CARDS */
-
     .tools {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 26px;
     }
 
     .card {
       background: white;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      box-shadow: 0 9px 26px rgba(0,0,0,0.12);
     }
 
     .card-image {
       width: 100%;
-      height: 190px;
+      height: 200px;
       object-fit: cover;
       display: block;
-      background: #e2e4e7;
+      background: #e4e6e9;
     }
 
     .card-content {
-      padding: 24px;
+      padding: 25px;
     }
 
     .card h3 {
       font-size: 1.45rem;
-      margin-bottom: 8px;
+      margin-bottom: 9px;
     }
 
     .card p {
       color: #666;
-      margin-bottom: 20px;
-      min-height: 52px;
+      margin-bottom: 22px;
     }
 
     .button {
@@ -126,46 +119,58 @@
       padding: 10px 18px;
       border-radius: 6px;
       font-weight: bold;
+      transition: background 0.2s ease;
     }
 
     .button:hover {
-      background: #333840;
+      background: #3a3f47;
     }
 
-    /* COMING SOON */
+    .coming-card {
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+    }
 
-    .coming-soon .card {
-      opacity: 0.88;
+    .coming-visual {
+      height: 200px;
+      background:
+        linear-gradient(135deg, #262a31 25%, #31363f 25%, #31363f 50%, #262a31 50%, #262a31 75%, #31363f 75%);
+      background-size: 36px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e0a100;
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .badge {
       display: inline-block;
-      background: #e6e4dc;
+      background: #e8e7e1;
       color: #555;
       padding: 4px 10px;
       border-radius: 20px;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: bold;
-      margin-bottom: 10px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
+      margin-bottom: 10px;
     }
-
-    /* FOOTER */
 
     footer {
       background: #1d2025;
       color: #aeb3ba;
       text-align: center;
-      padding: 30px 20px;
+      padding: 32px 20px;
       font-size: 0.9rem;
     }
 
-    /* MOBILE */
-
     @media (max-width: 600px) {
       header {
-        padding: 40px 20px;
+        padding: 50px 20px;
       }
 
       main {
@@ -175,212 +180,221 @@
       section h2 {
         font-size: 1.7rem;
       }
+
+      .card-image,
+      .coming-visual {
+        height: 180px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>How to Civil Engineer</h1>
-  <p>
-    Free browser-based tools for civil engineers, surveyors and designers.
-    No installation. No account. Just open and use.
-  </p>
-</header>
-
-<main>
-
-  <!-- AVAILABLE TOOLS -->
-
-  <section>
-    <h2>Civil Engineering Tools</h2>
-    <p class="section-intro">
-      Practical tools for surveying, terrain modelling, grading and earthworks.
+  <header>
+    <h1>How to Civil Engineer</h1>
+    <p>
+      Free browser-based tools for civil engineers, surveyors and designers.
+      No installation. No account. Just open and use.
     </p>
+  </header>
 
-    <div class="tools">
+  <main>
 
-      <!-- TOPO SOLVER -->
+    <!-- AVAILABLE TOOLS -->
 
-      <div class="card">
-        <img
-          class="card-image"
-          src="images/topo-solver.png"
-          alt="TOPO Solver screenshot"
-        >
+    <section>
+      <h2>Civil Engineering Tools</h2>
 
-        <div class="card-content">
-          <h3>TOPO Solver</h3>
+      <p class="section-intro">
+        Practical tools for surveying, terrain modelling, grading and earthworks.
+      </p>
 
-          <p>
-            Turn survey points into a reviewed TIN surface.
-            Add breaklines, contours and export to CAD formats.
-          </p>
+      <div class="tools">
 
-          <a
-            class="button"
-            href="https://howtocivilengineer.github.io/Topo-Solver/"
+        <!-- TOPO SOLVER -->
+
+        <div class="card">
+
+          <img
+            class="card-image"
+            src="images/topo-solver.png"
+            alt="TOPO Solver screenshot"
           >
-            Open TOPO Solver
-          </a>
+
+          <div class="card-content">
+
+            <h3>TOPO Solver</h3>
+
+            <p>
+              Turn survey points into a reviewed TIN surface.
+              Add breaklines, contours and export to CAD formats.
+            </p>
+
+            <a
+              class="button"
+              href="https://howtocivilengineer.github.io/Topo-Solver/"
+            >
+              Open TOPO Solver
+            </a>
+
+          </div>
         </div>
-      </div>
 
 
-      <!-- GRADING SOLVER -->
+        <!-- GRADING SOLVER -->
 
-      <div class="card">
-        <img
-          class="card-image"
-          src="images/grading-solver.png"
-          alt="Grading Solver screenshot"
-        >
+        <div class="card">
 
-        <div class="card-content">
-          <h3>Grading Solver</h3>
-
-          <p>
-            Build and review grading solutions for civil engineering
-            surfaces and site design.
-          </p>
-
-          <a
-            class="button"
-            href="https://howtocivilengineer.github.io/Grading-Solver/"
+          <img
+            class="card-image"
+            src="images/grading-solver.png"
+            alt="Grading Solver screenshot"
           >
-            Open Grading Solver
-          </a>
+
+          <div class="card-content">
+
+            <h3>Grading Solver</h3>
+
+            <p>
+              Build and review grading solutions for civil engineering
+              surfaces and site design.
+            </p>
+
+            <a
+              class="button"
+              href="https://howtocivilengineer.github.io/Grading-Solver/"
+            >
+              Open Grading Solver
+            </a>
+
+          </div>
         </div>
-      </div>
 
 
-      <!-- VOLUME SOLVER -->
+        <!-- VOLUME SOLVER -->
 
-      <div class="card">
-        <img
-          class="card-image"
-          src="images/volume-solver.png"
-          alt="Volume Solver screenshot"
-        >
+        <div class="card">
 
-        <div class="card-content">
-          <h3>Volume Solver</h3>
-
-          <p>
-            Calculate earthworks volumes quickly and
-            review cut and fill quantities.
-          </p>
-
-          <a
-            class="button"
-            href="https://howtocivilengineer.github.io/Volume-Solver/"
+          <img
+            class="card-image"
+            src="images/volume-solver.png"
+            alt="Volume Solver screenshot"
           >
-            Open Volume Solver
-          </a>
+
+          <div class="card-content">
+
+            <h3>Volume Solver</h3>
+
+            <p>
+              Calculate earthworks volumes quickly and review
+              cut and fill quantities.
+            </p>
+
+            <a
+              class="button"
+              href="https://howtocivilengineer.github.io/Volume-Solver/"
+            >
+              Open Volume Solver
+            </a>
+
+          </div>
         </div>
+
+      </div>
+    </section>
+
+
+    <!-- COMING SOON -->
+
+    <section>
+
+      <h2>Coming Soon</h2>
+
+      <p class="section-intro">
+        More civil engineering design and modelling tools are in development.
+      </p>
+
+      <div class="tools">
+
+        <!-- PARTS SOLVER -->
+
+        <div class="card coming-card">
+
+          <div class="coming-visual">
+            Parts Solver
+          </div>
+
+          <div class="card-content">
+
+            <span class="badge">Coming Soon</span>
+
+            <h3>Parts Solver</h3>
+
+            <p>
+              Parametric civil engineering components for
+              faster design and modelling.
+            </p>
+
+          </div>
+        </div>
+
+
+        <!-- DRAFTING SOLVER -->
+
+        <div class="card coming-card">
+
+          <div class="coming-visual">
+            Drafting Solver
+          </div>
+
+          <div class="card-content">
+
+            <span class="badge">Coming Soon</span>
+
+            <h3>Drafting Solver</h3>
+
+            <p>
+              Browser-based drafting tools for civil engineering
+              plans and technical drawings.
+            </p>
+
+          </div>
+        </div>
+
+
+        <!-- VISUALISATION SOLVER -->
+
+        <div class="card coming-card">
+
+          <div class="coming-visual">
+            Visualisation Solver
+          </div>
+
+          <div class="card-content">
+
+            <span class="badge">Coming Soon</span>
+
+            <h3>Visualisation Solver</h3>
+
+            <p>
+              Explore civil engineering models in 3D,
+              with tools for terrain and project visualisation.
+            </p>
+
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </section>
+    </section>
+
+  </main>
 
 
-  <!-- COMING SOON -->
-
-  <section class="coming-soon">
-
-    <h2>Coming Soon</h2>
-
-    <p class="section-intro">
-      More civil engineering design and modelling tools are in development.
-    </p>
-
-    <div class="tools">
-
-      <!-- PARTS SOLVER -->
-
-      <div class="card">
-
-        <img
-          class="card-image"
-          src="images/parts-solver.png"
-          alt="Parts Solver preview"
-        >
-
-        <div class="card-content">
-
-          <span class="badge">Coming Soon</span>
-
-          <h3>Parts Solver</h3>
-
-          <p>
-            Parametric civil engineering components for
-            faster design and modelling.
-          </p>
-
-        </div>
-      </div>
-
-
-      <!-- DRAFTING SOLVER -->
-
-      <div class="card">
-
-        <img
-          class="card-image"
-          src="images/drafting-solver.png"
-          alt="Drafting Solver preview"
-        >
-
-        <div class="card-content">
-
-          <span class="badge">Coming Soon</span>
-
-          <h3>Drafting Solver</h3>
-
-          <p>
-            Browser-based drafting tools for civil engineering
-            plans and technical drawings.
-          </p>
-
-        </div>
-      </div>
-
-
-      <!-- VISUALISATION SOLVER -->
-
-      <div class="card">
-
-        <img
-          class="card-image"
-          src="images/visualisation-solver.png"
-          alt="Visualisation Solver preview"
-        >
-
-        <div class="card-content">
-
-          <span class="badge">Coming Soon</span>
-
-          <h3>Visualisation Solver</h3>
-
-          <p>
-            Explore civil engineering models in 3D,
-            with tools for terrain and project visualisation.
-          </p>
-
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-</main>
-
-
-<footer>
-  © 2026 How to Civil Engineer
-</footer>
+  <footer>
+    © 2026 How to Civil Engineer
+  </footer>
 
 </body>
 </html>
