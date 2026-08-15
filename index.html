@@ -1,23 +1,387 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QEVJSJFP5R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QEVJSJFP5R');
-</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>How to Civil Engineer</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QEVJSJFP5R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QEVJSJFP5R');
+  </script>
+
+  <title>How to Civil Engineer — Free Civil Engineering Tools</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f5f7;
+      color: #1d2025;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #1d2025;
+      color: white;
+      padding: 55px 20px 50px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: auto;
+      color: #d5d8dc;
+      font-size: 1.15rem;
+    }
+
+    /* MAIN */
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 55px 20px 80px;
+    }
+
+    section {
+      margin-bottom: 65px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-intro {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    /* CARDS */
+
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      background: #e2e4e7;
+    }
+
+    .card-content {
+      padding: 24px;
+    }
+
+    .card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #666;
+      margin-bottom: 20px;
+      min-height: 52px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1d2025;
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #333840;
+    }
+
+    /* COMING SOON */
+
+    .coming-soon .card {
+      opacity: 0.88;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e6e4dc;
+      color: #555;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #1d2025;
+      color: #aeb3ba;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+      header {
+        padding: 40px 20px;
+      }
+
+      main {
+        padding-top: 40px;
+      }
+
+      section h2 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
+
+<header>
   <h1>How to Civil Engineer</h1>
-  <p>Free tools for civil engineers and surveyors.</p>
+  <p>
+    Free browser-based tools for civil engineers, surveyors and designers.
+    No installation. No account. Just open and use.
+  </p>
+</header>
+
+<main>
+
+  <!-- AVAILABLE TOOLS -->
+
+  <section>
+    <h2>Civil Engineering Tools</h2>
+    <p class="section-intro">
+      Practical tools for surveying, terrain modelling, grading and earthworks.
+    </p>
+
+    <div class="tools">
+
+      <!-- TOPO SOLVER -->
+
+      <div class="card">
+        <img
+          class="card-image"
+          src="images/topo-solver.png"
+          alt="TOPO Solver screenshot"
+        >
+
+        <div class="card-content">
+          <h3>TOPO Solver</h3>
+
+          <p>
+            Turn survey points into a reviewed TIN surface.
+            Add breaklines, contours and export to CAD formats.
+          </p>
+
+          <a
+            class="button"
+            href="https://howtocivilengineer.github.io/Topo-Solver/"
+          >
+            Open TOPO Solver
+          </a>
+        </div>
+      </div>
+
+
+      <!-- GRADING SOLVER -->
+
+      <div class="card">
+        <img
+          class="card-image"
+          src="images/grading-solver.png"
+          alt="Grading Solver screenshot"
+        >
+
+        <div class="card-content">
+          <h3>Grading Solver</h3>
+
+          <p>
+            Build and review grading solutions for civil engineering
+            surfaces and site design.
+          </p>
+
+          <a
+            class="button"
+            href="https://howtocivilengineer.github.io/Grading-Solver/"
+          >
+            Open Grading Solver
+          </a>
+        </div>
+      </div>
+
+
+      <!-- VOLUME SOLVER -->
+
+      <div class="card">
+        <img
+          class="card-image"
+          src="images/volume-solver.png"
+          alt="Volume Solver screenshot"
+        >
+
+        <div class="card-content">
+          <h3>Volume Solver</h3>
+
+          <p>
+            Calculate earthworks volumes quickly and
+            review cut and fill quantities.
+          </p>
+
+          <a
+            class="button"
+            href="https://howtocivilengineer.github.io/Volume-Solver/"
+          >
+            Open Volume Solver
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- COMING SOON -->
+
+  <section class="coming-soon">
+
+    <h2>Coming Soon</h2>
+
+    <p class="section-intro">
+      More civil engineering design and modelling tools are in development.
+    </p>
+
+    <div class="tools">
+
+      <!-- PARTS SOLVER -->
+
+      <div class="card">
+
+        <img
+          class="card-image"
+          src="images/parts-solver.png"
+          alt="Parts Solver preview"
+        >
+
+        <div class="card-content">
+
+          <span class="badge">Coming Soon</span>
+
+          <h3>Parts Solver</h3>
+
+          <p>
+            Parametric civil engineering components for
+            faster design and modelling.
+          </p>
+
+        </div>
+      </div>
+
+
+      <!-- DRAFTING SOLVER -->
+
+      <div class="card">
+
+        <img
+          class="card-image"
+          src="images/drafting-solver.png"
+          alt="Drafting Solver preview"
+        >
+
+        <div class="card-content">
+
+          <span class="badge">Coming Soon</span>
+
+          <h3>Drafting Solver</h3>
+
+          <p>
+            Browser-based drafting tools for civil engineering
+            plans and technical drawings.
+          </p>
+
+        </div>
+      </div>
+
+
+      <!-- VISUALISATION SOLVER -->
+
+      <div class="card">
+
+        <img
+          class="card-image"
+          src="images/visualisation-solver.png"
+          alt="Visualisation Solver preview"
+        >
+
+        <div class="card-content">
+
+          <span class="badge">Coming Soon</span>
+
+          <h3>Visualisation Solver</h3>
+
+          <p>
+            Explore civil engineering models in 3D,
+            with tools for terrain and project visualisation.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+  © 2026 How to Civil Engineer
+</footer>
+
 </body>
 </html>
+```
