@@ -153,59 +153,6 @@
       margin: 0 8px;
     }
 
-    /* VIDEO */
-
-    .video-link {
-      display: block;
-      position: relative;
-      margin-top: 18px;
-      border-radius: 8px;
-      overflow: hidden;
-      text-decoration: none;
-    }
-
-    .video-thumbnail {
-      width: 100%;
-      display: block;
-      transition: transform 0.2s ease;
-    }
-
-    .video-link:hover .video-thumbnail {
-      transform: scale(1.03);
-    }
-
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 64px;
-      height: 45px;
-      background: #ff0000;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.35);
-    }
-
-    .play-button::after {
-      content: "";
-      width: 0;
-      height: 0;
-      border-top: 9px solid transparent;
-      border-bottom: 9px solid transparent;
-      border-left: 15px solid white;
-      margin-left: 3px;
-    }
-
-    .video-title {
-      margin-top: 8px;
-      font-size: 0.85rem;
-      color: #666;
-      text-align: center;
-    }
-
     .coming-card {
       min-height: 330px;
       display: flex;
@@ -419,7 +366,6 @@
             </a>
 
             <div class="project-links">
-
               <a
                 href="https://github.com/howtocivilengineer/Volume-Solver"
                 target="_blank"
@@ -428,30 +374,15 @@
                 README
               </a>
 
-            </div>
+              <span class="separator">·</span>
 
-            <!-- VOLUME SOLVER VIDEO -->
-
-            <a
-              class="video-link"
-              href="https://youtu.be/8_uI0onLurI"
-              target="_blank"
-              rel="noopener"
-              aria-label="Watch Volume Solver video"
-            >
-
-              <img
-                class="video-thumbnail"
-                src="https://i.ytimg.com/vi/8_uI0onLurI/maxresdefault.jpg"
-                alt="Volume Solver video thumbnail"
+              <a
+                href="https://youtu.be/8_uI0onLurI"
+                target="_blank"
+                rel="noopener"
               >
-
-              <span class="play-button"></span>
-
-            </a>
-
-            <div class="video-title">
-              Watch the Volume Solver walkthrough
+                YouTube
+              </a>
             </div>
 
           </div>
